@@ -34,6 +34,8 @@ RUN chmod +x manage.py
 RUN ls -lart
 RUN pwd
 RUN whoami
+RUN ls -lart /app/manage.py
+
 RUN DATABASE_URL="" \
   # Sample keys, not to be used for realsies:
   DB_ENCRYPTION_KEY="IfFzxkuTnuk-J-TnjisNz0wlBHmAILOnAzoG-NpMQNE=" \
