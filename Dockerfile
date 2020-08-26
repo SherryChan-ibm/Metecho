@@ -31,8 +31,8 @@ RUN yarn install --check-files
 # Avoid building prod assets in development
 RUN if [ "${BUILD_ENV}" = "production" ] ; then yarn prod ; else mkdir -p dist/prod ; fi
 RUN chmod +x manage.py
-CMD ls -lart
-CMD pwd
+RUN ls -lart
+RUN pwd
 
 RUN DATABASE_URL="" \
   # Sample keys, not to be used for realsies:
@@ -41,4 +41,4 @@ RUN DATABASE_URL="" \
   DJANGO_SECRET_KEY="sample secret key" \
   python manage.py collectstatic --noinput
 
-CMD /start-server.sh
+CMD ls -lart && pwd && /start-server.sh
