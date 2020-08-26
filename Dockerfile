@@ -33,15 +33,12 @@ RUN if [ "${BUILD_ENV}" = "production" ] ; then yarn prod ; else mkdir -p dist/p
 RUN chmod +x manage.py
 RUN ls -lart
 RUN pwd
-
+RUN whoami
 RUN DATABASE_URL="" \
   # Sample keys, not to be used for realsies:
   DB_ENCRYPTION_KEY="IfFzxkuTnuk-J-TnjisNz0wlBHmAILOnAzoG-NpMQNE=" \
   DJANGO_HASHID_SALT="sample hashid salt" \
   DJANGO_SECRET_KEY="sample secret key" \
-  ls -lart \
-  pwd \
-  cd /app \
   python manage.py collectstatic --noinput
 
 CMD ls -lart && pwd && /start-server.sh
