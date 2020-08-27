@@ -57,6 +57,6 @@ RUN DATABASE_URL="" \
   DJANGO_SECRET_KEY="sample secret key" && \ 
   python /app/manage.py collectstatic --noinput 
 
-RUN cp /start-server.sh /app/
-CMD ls -lart &
+RUN sed 's/manage.py/\/app\/manage.py/g' /start-server.sh 
+CMD /start-server.sh
 
