@@ -58,5 +58,6 @@ RUN DATABASE_URL="" \
   python /app/manage.py collectstatic --noinput 
 
 RUN cp /start-server.sh /app/
-CMD ls -lart && pwd && /app/start-server.sh
+RUN cp /app/
+CMD ls -lart &
 
