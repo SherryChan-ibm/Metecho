@@ -40,7 +40,8 @@ RUN DATABASE_URL="" \
   # Sample keys, not to be used for realsies:
   DB_ENCRYPTION_KEY="IfFzxkuTnuk-J-TnjisNz0wlBHmAILOnAzoG-NpMQNE=" \
   DJANGO_HASHID_SALT="sample hashid salt" \
-  DJANGO_SECRET_KEY="sample secret key" \
-  python manage.py collectstatic --noinput
+  DJANGO_SECRET_KEY="sample secret key" 
+
+RUN python /app/manage.py collectstatic --noinput
 
 CMD ls -lart && pwd && /start-server.sh
