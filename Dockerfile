@@ -49,7 +49,7 @@ ENV DATABASE_URL=""
 
 RUN python /app/manage.py collectstatic --noinput 
 RUN echo "Run 2"
-
+RUN cp /start-server.sh /app/start-server.sh
 RUN DATABASE_URL="" \
   # Sample keys, not to be used for realsies:
   DB_ENCRYPTION_KEY="IfFzxkuTnuk-J-TnjisNz0wlBHmAILOnAzoG-NpMQNE=" && \
