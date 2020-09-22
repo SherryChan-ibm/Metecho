@@ -58,5 +58,5 @@ RUN DATABASE_URL="" \
   python /app/manage.py collectstatic --noinput 
 
 RUN sed -i 's/manage.py/\/app\/manage.py/g' /start-server.sh 
-CMD /start-server.sh
+CMD /start-server.sh  
 
