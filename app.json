@@ -6,7 +6,7 @@
   "env": {
     "DJANGO_ALLOWED_HOSTS": {
       "description": "Heroku proxies web requests and Django needs to be configured to allow the forwards",
-      "value": "web-metecho.salesforce-cluster-ecf58268eb10995f067698dffc82d2a7-0000.eu-gb.containers.appdomain.cloud"
+      "value": "*"
     },
     "DJANGO_ADMIN_URL": {
       "description": "The url path to the admin section of the site",
