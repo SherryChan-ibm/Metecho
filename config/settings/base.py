@@ -99,18 +99,6 @@ if MODE == "dev":
     environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
 ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "127.0.0.1:8000",
-    "127.0.0.1:8080",
-    "0.0.0.0",
-    "0.0.0.0:8000",
-    "0.0.0.0:8080",
-    "localhost",
-    "localhost:8000",
-    "localhost:8080",
-    "*",
-    "web-metecho.salesforce-cluster-ecf58268eb10995f067698dffc82d2a7-0000.eu-gb.containers.appdomain.cloud",
-    "web-metecho.salesforce-cluster-ecf58268eb10995f067698dffc82d2a7-0000.eu-gb.containers.appdomain.cloud:8080",
 ] + [
     el.strip()
     for el in env("DJANGO_ALLOWED_HOSTS", default="", type_=lambda x: x.split(","))
