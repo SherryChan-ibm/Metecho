@@ -99,6 +99,7 @@ if MODE == "dev":
     environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
 ALLOWED_HOSTS = [
+    "*"
 ] + [
     el.strip()
     for el in env("DJANGO_ALLOWED_HOSTS", default="", type_=lambda x: x.split(","))
