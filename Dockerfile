@@ -55,7 +55,6 @@ RUN DATABASE_URL="" \
   DB_ENCRYPTION_KEY="IfFzxkuTnuk-J-TnjisNz0wlBHmAILOnAzoG-NpMQNE=" && \
   DJANGO_HASHID_SALT="sample hashid salt" && \
   DJANGO_SECRET_KEY="sample secret key" && \ 
-  DJANGO_ALLOWED_HOSTS="*" && \ 
   python /app/manage.py collectstatic --noinput 
 
 RUN sed -i 's/manage.py/\/app\/manage.py/g' /start-server.sh 
